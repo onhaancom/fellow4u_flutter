@@ -79,7 +79,7 @@ class _FeaturedToursSectionState extends State<FeaturedToursSection> {
               final tour = tours[index];
               return Padding(
                 padding: const EdgeInsets.only(bottom: 20),
-                child: _TourCard(
+                child: TourCard(
                   key: ValueKey('tourCard_$index'),
                   title: tour['title'] ?? 'Tour',
                   date: tour['date'] ?? 'N/A',
@@ -98,7 +98,7 @@ class _FeaturedToursSectionState extends State<FeaturedToursSection> {
   }
 }
 
-class _TourCard extends StatelessWidget {
+class TourCard extends StatelessWidget {
   final String title;
   final String date;
   final String duration;
@@ -107,7 +107,7 @@ class _TourCard extends StatelessWidget {
   final bool isFavorite;
   final String imageUrl;
 
-  const _TourCard({
+  const TourCard({
     super.key,
     required this.title,
     required this.date,

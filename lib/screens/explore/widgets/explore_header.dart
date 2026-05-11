@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../search_initial_screen.dart';
 
 class ExploreHeader extends StatelessWidget {
   const ExploreHeader({super.key});
@@ -107,6 +108,13 @@ class ExploreHeader extends StatelessWidget {
               ],
             ),
             child: TextField(
+              readOnly: true,
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SearchInitialScreen()),
+                );
+              },
               decoration: InputDecoration(
                 hintText: "Hi, where do you want to guide?",
                 hintStyle: const TextStyle(color: Colors.grey, fontSize: 16),

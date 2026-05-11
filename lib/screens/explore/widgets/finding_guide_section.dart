@@ -90,7 +90,7 @@ class _FindingGuideSectionState extends State<FindingGuideSection> {
                     ? '${ApiService.baseUrl}$avatarUrl'
                     : avatarUrl;
 
-                return _GuideCard(
+                return GuideCard(
                   name: fullName,
                   country: country,
                   date: "Joined Jan 2024", // Placeholder date
@@ -105,14 +105,14 @@ class _FindingGuideSectionState extends State<FindingGuideSection> {
   }
 }
 
-class _GuideCard extends StatelessWidget {
+class GuideCard extends StatelessWidget {
   final String name;
   final String country;
   final String date;
   final String location;
   final String? imageUrl;
 
-  const _GuideCard({
+  const GuideCard({
     required this.name,
     required this.country,
     required this.date,
